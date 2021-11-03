@@ -232,6 +232,7 @@ li > a {
 }
 
 .swiper-slide {
+  filter: blur(2px);
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -264,12 +265,9 @@ li > a {
   margin-right: auto;
 }
 
-.form-bg {
-  background: url(img/stock/pexels-04.webp);
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+form {
+  padding: 1rem;
 }
-
 .section-contacts {
   display: flex;
   flex-direction: column;
