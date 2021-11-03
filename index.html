@@ -83,8 +83,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css" />
@@ -106,18 +112,10 @@
 
         <div class="container--main overthetop">
           <h1 style="margin-bottom: 0">Oggettistica vintage</h1>
-          <div class="container--social">
-            
-              <a href="mailto:antiquita@gmail.com" target="_blank">
-                <div class="social--col">
-                <h3 style="margin-bottom: 0">Contatto email</h3>
-                <img class="social--img" src="/img/icon/icon-mail.svg" />
-              </div>
-              </a>
-          
-          </div>
-       </div>
-
+          <a href="#contact">
+            <img id="arrowdown" src="img/icon/icon-arrowdown.svg" />
+          </a>
+        </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img class="container--img" src="img/stock/pexels-01.webp" />
@@ -137,13 +135,40 @@
           <div class="swiper-slide">
             <img class="container--img" src="img/stock/pexels-06.webp" />
           </div>
-          </div>
         </div>
       </div>
     </div>
 
-    
-    
+    <div id="contact" class="container--main">
+      <h1 style="margin: 1rem; font-size: 50px; line-height: 55px">
+        Hai oggetti vintage che vuoi comprare o vendere?
+      </h1>
+      <p style="margin: 1rem; font-size: 20px">
+        Puoi scrivermi usando il form qui sotto.
+      </p>
+    </div>
+
+    <form id="form" name="myForm" method="post" action="contact.php">
+      <div class="contacts-content" class="input-small">
+        <div class="contacts-subtitle">Nome</div>
+        <input type="text" name="Name" class="input-small" required />
+        <div class="contacts-subtitle">La tua email</div>
+        <input type="text" name="Email" class="input-small" required />
+        <div class="contacts-subtitle">Telefono</div>
+        <input type="number" name="Tel" class="input-small" required />
+        <div class="contacts-subtitle">Messaggio</div>
+        <input type="text" name="Message" required class="input-big" />
+
+        <div style="display: flex; margin: 25px 0">
+          <input name="termini" type="checkbox" required />
+          Accetto<a href="condizioni-di-vendita.html"
+            ><b>Termini & Condizioni</b></a
+          >
+        </div>
+        <br />
+        <button type="submit">Invia</button>
+      </div>
+    </form>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>

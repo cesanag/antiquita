@@ -11,12 +11,20 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Zen Antique", serif;
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: rgb(212, 212, 212);
+  border: none;
+  font-size: 18px;
+}
 a {
   text-decoration: none;
+  color: black;
 }
 
 .container {
@@ -183,16 +191,35 @@ ul {
   text-align: center;
   z-index: 10000;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   mix-blend-mode: luminosity;
-
+  font-size: 30px;
   transform: translate(-50%, -50%);
   color: white;
   text-shadow: 1px 0 0 var(--sepia), -1px 0 0 var(--sepia), 0 1px 0 var(--sepia),
     0 -1px 0 var(--sepia), 1px 1px var(--sepia), -1px -1px 0 var(--sepia),
     1px -1px 0 var(--sepia), -1px 1px 0 var(--sepia);
   filter: sepia(1);
+}
+
+#arrowdown {
+  transform: scale(1);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 li > a {
@@ -236,15 +263,93 @@ li > a {
   margin-left: auto;
   margin-right: auto;
 }
-/* End Swiper */
 
-/* Start Modal */
+.form-bg {
+  background: url(img/stock/pexels-04.webp);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.section-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.contacts-container {
+  width: 1040px;
+  clear: both;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin-top: -100px;
+  margin-bottom: 180px;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 0 3px 50px rgba(0, 0, 0, 0.05);
+}
+
+.contacts-col {
+  display: flex;
+}
+
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.contacts-title-big {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 65px;
+}
+
+.contacts-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.contacts-subtitle {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.contacts-text {
+  margin-bottom: 32px;
+}
+
+.input-small {
+  font-size: 18px;
+  border: 2px solid #e5e5e5;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.input-big {
+  width: 100%;
+  height: 145px;
+  border: 2px solid #e5e5e5;
+}
 
 @media screen and (max-width: 1000px) {
   .divider {
     width: 100%;
     height: 10vh;
     clear: both;
+  }
+
+  .logo {
+    width: 100vw;
+  }
+
+  .input-small {
+    width: 100%;
   }
 
   .title {
