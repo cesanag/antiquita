@@ -17,10 +17,11 @@ body {
 
 button {
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: rgb(212, 212, 212);
   border: none;
-  font-size: 18px;
+  font-size: 20px;
+  border-radius: 1rem;
 }
 a {
   text-decoration: none;
@@ -229,10 +230,38 @@ li > a {
 .swiper {
   width: 100%;
   height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper2 {
+  width: 50vw;
+  height: 40vw;
+  object-fit: cover;
 }
 
 .swiper-slide {
-  filter: blur(2px);
+  /* filter: blur(2px); */
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide2 {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -258,11 +287,6 @@ li > a {
   height: 100%;
   object-fit: cover;
   filter: sepia(50%);
-}
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 form {

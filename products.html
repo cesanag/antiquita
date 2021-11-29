@@ -102,31 +102,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="js/web-components.js" async></script>
-    <script src="components/navbar.js" async></script>
-
     <title>Antiquita | Oggettistica vintage</title>
   </head>
   <body>
+    <a href="index.html" class="container--main">
+      <img
+        style="width: 400px; height: 100%"
+        src="img/logo-big.webp"
+        alt="logo"
+      />
+    </a>
     <div class="container--main">
+      <h1>Stampe antiche</h1>
+      <p>Ville di Brianza</p>
       <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <img class="logo" src="img/logo-big.webp" alt="logo" />
-
-        <div class="container--main overthetop">
-          <a href="products.html">
-            <button
-              style="margin-top: 1rem; margin-bottom: 2rem"
-              class="button"
-            >
-              Vedi i prodotti
-            </button>
-          </a>
-          <!-- <h1 style="margin-bottom: 0">Oggettistica vintage</h1> -->
-          <a href="contact.html">
-            <button style="margin-bottom: 2rem" class="button">Contatti</button>
-          </a>
-        </div>
+      <div class="swiper2 mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img class="container--img" src="img/stock/pexels-01.webp" />
@@ -148,16 +138,34 @@
           </div>
         </div>
       </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+        direction: "horizontal",
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
         },
-        loop: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
       });
     </script>
   </body>
