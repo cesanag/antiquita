@@ -14,6 +14,35 @@ class ProductsList extends HTMLElement {
           </h4>
 
           <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    src="img/products/campagna-napoleone/campagna-napoleone-01.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Campagne in Italia di Napoleone</h5>
+                  <p class="card-text">
+                    Una collezione di stampe delle campagne napoleoniche in Italia.
+                  </p>
+                  <a href="product-campagnanapoleone.html" class="btn btn-primary">Scopri</a>
+                </div>
+              </div>
+            </div>
+
+            
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="card">
                 <div
@@ -96,10 +125,13 @@ class ProductsList extends HTMLElement {
                   <p class="card-text">
                     Una collezione di stampe dei più importanti scorci milanesi.
                   </p>
-                  <a href="products.html" class="btn btn-primary">Button</a>
+                  <a href="product-naviglimilanesi.html" class="btn btn-primary">Scopri</a>
                 </div>
               </div>
             </div>
+
+            
+
           </div>
         </section>
         <!--Section: Content-->
