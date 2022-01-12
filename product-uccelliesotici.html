@@ -126,30 +126,37 @@
                 universel d'histoire naturelle"
               </p>
             </section>
-            <!--Section: Text-->
-            <!--Section: Post data-mdb-->
-            <section class="border-bottom mb-4">
+
+            <section id="uccelli-esotici"></section>
+
+            <script>
+              let uccelliEsotici = [
+                "uccelli-01",
+                "uccelli-02",
+                "uccelli-03",
+                "uccelli-04",
+              ];
+
+              let img = uccelliEsotici
+                .map(
+                  (i) =>
+                    `
               <img
-                src="img/products/uccelli/uccelli-01.jpg"
+                src="img/products/uccelli/${i}.jpg"
                 class="img-fluid shadow-2-strong rounded mb-4"
                 alt=""
-              />
-              <img
-                src="img/products/uccelli/uccelli-02.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/uccelli/uccelli-03.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/uccelli/uccelli-04.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-            </section>
+              />`
+                )
+                .join("");
+              let div = document.createElement("div");
+              let sectionDiv = document.createElement("section");
+              sectionDiv.innerHTML = '<section class="border-bottom mb-4">';
+              div.innerHTML = img;
+              document
+                .getElementById("uccelli-esotici")
+                .appendChild(sectionDiv);
+              document.getElementById("uccelli-esotici").appendChild(div);
+            </script>
           </div>
           <!--Grid column-->
 
@@ -187,6 +194,5 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

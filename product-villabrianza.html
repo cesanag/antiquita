@@ -126,25 +126,34 @@
                 Brianza.
               </p>
             </section>
-            <!--Section: Text-->
-            <!--Section: Post data-mdb-->
-            <section class="border-bottom mb-4">
+            <section id="villabrianza"></section>
+
+            <script>
+              let villabrianza = [
+                "villabrianza-01",
+                "villabrianza-02",
+                "villabrianza-03",
+                "villabrianza-04",
+              ];
+
+              let img = villabrianza
+                .map(
+                  (i) =>
+                    `
               <img
-                src="img/products/villabrianza/villabrianza-01.jpg"
+                src="img/products/villabrianza/${i}.jpg"
                 class="img-fluid shadow-2-strong rounded mb-4"
                 alt=""
-              />
-              <img
-                src="img/products/villabrianza/villabrianza-02.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/villabrianza/villabrianza-03.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-            </section>
+              />`
+                )
+                .join("");
+              let div = document.createElement("div");
+              let sectionDiv = document.createElement("section");
+              sectionDiv.innerHTML = '<section class="border-bottom mb-4">';
+              div.innerHTML = img;
+              document.getElementById("villabrianza").appendChild(sectionDiv);
+              document.getElementById("villabrianza").appendChild(div);
+            </script>
           </div>
           <!--Grid column-->
 
@@ -181,6 +190,5 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

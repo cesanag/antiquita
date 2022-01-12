@@ -125,133 +125,57 @@
             </section>
             <!--Section: Text-->
             <!--Section: Post data-mdb-->
-            <section class="border-bottom mb-4">
+
+            <section id="campagna-napoleone"></section>
+            <script>
+              let campagnaNapoleone = [
+                "campagna-napoleone-01",
+                "campagna-napoleone-02",
+                "campagna-napoleone-03",
+                "campagna-napoleone-04",
+                "campagna-napoleone-05",
+                "campagna-napoleone-06",
+                "campagna-napoleone-07",
+                "campagna-napoleone-08",
+                "campagna-napoleone-09",
+                "campagna-napoleone-10",
+                "campagna-napoleone-11",
+                "campagna-napoleone-13",
+                "campagna-napoleone-14",
+                "campagna-napoleone-15",
+                "campagna-napoleone-16",
+                "campagna-napoleone-17",
+                "campagna-napoleone-18",
+                "campagna-napoleone-19",
+                "campagna-napoleone-20",
+                "campagna-napoleone-21",
+                "campagna-napoleone-22",
+                "campagna-napoleone-23",
+                "campagna-napoleone-24",
+                "campagna-napoleone-25",
+              ];
+
+              let img = campagnaNapoleone
+                .map(
+                  (i) =>
+                    `
+              <section class="border-bottom mb-4">
               <img
-                src="img/products/campagna-napoleone/campagna-napoleone-01.jpg"
+                src="img/products/campagna-napoleone/${i}.jpg"
                 class="img-fluid shadow-2-strong rounded mb-4"
                 alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-02.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-03.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-04.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-05.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-06.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-07.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-08.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-09.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-10.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-11.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-12.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-13.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-14.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-15.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-16.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-17.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-18.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-19.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-20.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-21.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-22.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-23.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-24.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/campagna-napoleone/campagna-napoleone-25.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-            </section>
+              />`
+                )
+                .join("");
+              let div = document.createElement("div");
+              let sectionDiv = document.createElement("section");
+              sectionDiv.innerHTML = '<section class="border-bottom mb-4">';
+              div.innerHTML = img;
+              document
+                .getElementById("campagna-napoleone")
+                .appendChild(sectionDiv);
+              document.getElementById("campagna-napoleone").appendChild(div);
+            </script>
           </div>
           <!--Grid column-->
 
@@ -289,6 +213,5 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

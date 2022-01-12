@@ -127,33 +127,36 @@
             </section>
             <!--Section: Text-->
             <!--Section: Post data-mdb-->
-            <section class="border-bottom mb-4">
+
+            <section id="navigli"></section>
+
+            <script>
+              let navigli = [
+                "navigli-01",
+                "navigli-02",
+                "navigli-03",
+                "navigli-04",
+                "navigli-05",
+              ];
+
+              let img = navigli
+                .map(
+                  (i) =>
+                    `
               <img
-                src="img/products/navigli/navigli-01.jpg"
+                src="img/products/navigli/${i}.jpg"
                 class="img-fluid shadow-2-strong rounded mb-4"
                 alt=""
-              />
-              <img
-                src="img/products/navigli/navigli-02.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/navigli/navigli-03.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/navigli/navigli-04.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-              <img
-                src="img/products/navigli/navigli-05.jpg"
-                class="img-fluid shadow-2-strong rounded mb-4"
-                alt=""
-              />
-            </section>
+              />`
+                )
+                .join("");
+              let div = document.createElement("div");
+              let sectionDiv = document.createElement("section");
+              sectionDiv.innerHTML = '<section class="border-bottom mb-4">';
+              div.innerHTML = img;
+              document.getElementById("navigli").appendChild(sectionDiv);
+              document.getElementById("navigli").appendChild(div);
+            </script>
           </div>
           <!--Grid column-->
 
@@ -191,6 +194,5 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
